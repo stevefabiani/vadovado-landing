@@ -1,0 +1,11 @@
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Editor scratch
+*.swp
+.idea/
+.vscode/
+
+# Local preview servers
+.cache/

@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>VadoVado — Plan trips. Track costs. Travel light.</title>
+  <meta name="description" content="VadoVado is a native iOS + Mac trip planner that keeps your travel, lodging, activities, and costs in one private, file-based vault." />
+  <meta name="theme-color" content="#2E5E8F" />
+
+  <!-- Brand favicons -->
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
+
+  <!-- Social / Open Graph -->
+  <meta property="og:title" content="VadoVado — Plan trips. Track costs. Travel light." />
+  <meta property="og:description" content="A native trip planner for iOS + Mac. Itinerary, lodging, costs — one private vault, your file." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://vadovado.com/" />
+  <meta property="og:image" content="https://vadovado.com/assets/apple-touch-icon.png" />
+
+  <!-- Manrope + JetBrains Mono per the brand kit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ── Palette (vadovado-brand/source/palette.txt) ─────────────── */
+    :root {
+      --adriatic: #2E5E8F;
+      --adriatic-deep: #1D4267;
+      --notte: #16212E;
+      --sole: #D99A3C;
+      --osso: #F7F4ED;
+      --osso-2: #ECE6D8;
+      --line: rgba(22, 33, 46, 0.10);
+    }
+
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      font-family: 'Manrope', system-ui, -apple-system, 'Helvetica Neue', sans-serif;
+      color: var(--notte);
+      background: var(--osso);
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    a { color: var(--adriatic); text-decoration: none; }
+    a:hover { color: var(--adriatic-deep); text-decoration: underline; }
+
+    /* ── Header ─────────────────────────────────────────────────── */
+    header {
+      padding: 28px 32px;
+      display: flex; align-items: center; justify-content: space-between;
+      max-width: 1120px; margin: 0 auto;
+    }
+    header .brand img { height: 36px; display: block; }
+    header nav a {
+      margin-left: 22px; font-weight: 500; font-size: 14px; color: var(--notte);
+    }
+    header nav a:hover { color: var(--adriatic-deep); }
+
+    /* ── Hero ───────────────────────────────────────────────────── */
+    .hero {
+      max-width: 1120px; margin: 0 auto; padding: 64px 32px 88px;
+      display: grid; grid-template-columns: 1.2fr 1fr; gap: 64px; align-items: center;
+    }
+    .hero-copy h1 {
+      font-family: 'Manrope', sans-serif;
+      font-weight: 800; font-size: clamp(40px, 6vw, 64px); line-height: 1.05;
+      margin: 0 0 20px; letter-spacing: -0.02em;
+    }
+    .hero-copy h1 .accent { color: var(--sole); }
+    .hero-copy .tagline {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 13px; text-transform: uppercase; letter-spacing: 0.12em;
+      color: var(--adriatic); margin: 0 0 28px;
+    }
+    .hero-copy p.lede {
+      font-size: 18px; max-width: 540px; margin: 0 0 32px; color: var(--notte);
+    }
+
+    .cta-row { display: flex; flex-wrap: wrap; gap: 12px; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 13px 22px; border-radius: 10px; font-weight: 600; font-size: 15px;
+      transition: transform 0.08s ease, box-shadow 0.12s ease;
+    }
+    .btn-primary { background: var(--adriatic); color: var(--osso); }
+    .btn-primary:hover { background: var(--adriatic-deep); color: var(--osso); text-decoration: none; transform: translateY(-1px); box-shadow: 0 4px 14px rgba(46, 94, 143, 0.28); }
+    .btn-ghost { color: var(--notte); border: 1px solid var(--line); background: transparent; }
+    .btn-ghost:hover { background: var(--osso-2); text-decoration: none; }
+    .btn .pending {
+      font-family: 'JetBrains Mono', monospace; font-size: 11px;
+      background: rgba(247, 244, 237, 0.15); padding: 2px 7px; border-radius: 4px;
+      letter-spacing: 0.05em;
+    }
+
+    .hero-art {
+      display: flex; justify-content: center; align-items: center;
+      padding: 24px;
+    }
+    .hero-art img { width: 100%; max-width: 360px; height: auto; }
+
+    /* ── Sections ───────────────────────────────────────────────── */
+    section { padding: 64px 32px; }
+    section > .inner { max-width: 1120px; margin: 0 auto; }
+    section h2 {
+      font-weight: 700; font-size: clamp(28px, 4vw, 36px); margin: 0 0 14px;
+      letter-spacing: -0.01em;
+    }
+    section p.section-lede { font-size: 16px; max-width: 680px; margin: 0 0 36px; color: var(--notte); opacity: 0.85; }
+
+    .features {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 24px;
+    }
+    .feature {
+      background: #fff; border: 1px solid var(--line); border-radius: 14px;
+      padding: 24px;
+    }
+    .feature h3 { margin: 0 0 8px; font-size: 17px; font-weight: 700; }
+    .feature p { margin: 0; font-size: 14px; line-height: 1.55; color: var(--notte); opacity: 0.8; }
+    .feature .badge {
+      font-family: 'JetBrains Mono', monospace; font-size: 11px;
+      background: var(--osso-2); color: var(--adriatic-deep);
+      padding: 3px 8px; border-radius: 4px;
+      display: inline-block; margin-bottom: 12px; letter-spacing: 0.05em;
+    }
+
+    /* ── Philosophy stripe ──────────────────────────────────────── */
+    .stripe {
+      background: var(--adriatic); color: var(--osso);
+    }
+    .stripe h2 { color: var(--osso); }
+    .stripe p.section-lede { color: var(--osso); opacity: 0.9; }
+    .stripe a { color: var(--sole); }
+    .stripe a:hover { color: #f1b66b; }
+
+    /* ── Updates form ──────────────────────────────────────────── */
+    .updates {
+      background: var(--osso-2);
+    }
+    .updates form {
+      display: flex; gap: 12px; max-width: 520px; flex-wrap: wrap;
+      margin-top: 8px;
+    }
+    .updates input[type="email"] {
+      flex: 1 1 240px; padding: 13px 16px; border-radius: 10px;
+      border: 1px solid var(--line); font-family: inherit; font-size: 15px;
+      background: #fff; color: var(--notte);
+    }
+    .updates input[type="email"]:focus { outline: 2px solid var(--adriatic); outline-offset: 0; border-color: transparent; }
+    .updates .small {
+      margin-top: 14px; font-size: 12px; color: var(--notte); opacity: 0.7;
+    }
+
+    /* ── Footer ─────────────────────────────────────────────────── */
+    footer {
+      padding: 32px; border-top: 1px solid var(--line);
+      display: flex; flex-wrap: wrap; gap: 16px; justify-content: space-between; align-items: center;
+      max-width: 1120px; margin: 0 auto;
+      font-size: 13px; color: var(--notte); opacity: 0.75;
+    }
+    footer .copy { font-family: 'JetBrains Mono', monospace; font-size: 12px; }
+    footer nav a { margin-left: 18px; color: var(--notte); }
+
+    /* ── Responsive ─────────────────────────────────────────────── */
+    @media (max-width: 760px) {
+      .hero { grid-template-columns: 1fr; padding: 40px 24px 56px; gap: 36px; }
+      .hero-art { order: -1; padding: 0; }
+      .hero-art img { max-width: 220px; }
+      header { padding: 20px 24px; }
+      header nav a { margin-left: 14px; font-size: 13px; }
+      section { padding: 48px 24px; }
+      footer { padding: 24px; }
+      footer nav a { margin-left: 0; margin-right: 14px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a class="brand" href="/" aria-label="VadoVado home">
+      <img src="/assets/logo-horizontal.svg" alt="VadoVado" />
+    </a>
+    <nav>
+      <a href="#features">Features</a>
+      <a href="#philosophy">Philosophy</a>
+      <a href="#updates">Updates</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ── Hero ───────────────────────────────────────────────── -->
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="tagline">Vado, vado! — “I’m coming, I’m coming!”</p>
+        <h1>Plan the trip.<br/>Track every <span class="accent">dollar</span>.</h1>
+        <p class="lede">
+          VadoVado is a native trip planner for iOS and Mac. Itinerary, lodging, transportation, activities,
+          and costs — one private, file-based vault you own. No accounts. No cloud lock-in. Just your trip.
+        </p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#updates">Notify me at launch <span class="pending">soon</span></a>
+          <a class="btn btn-ghost" href="#features">See what’s inside →</a>
+        </div>
+      </div>
+      <div class="hero-art">
+        <img src="/assets/mark.svg" alt="VadoVado pin mark" />
+      </div>
+    </section>
+
+    <!-- ── Features ───────────────────────────────────────────── -->
+    <section id="features">
+      <div class="inner">
+        <h2>One trip, all of it.</h2>
+        <p class="section-lede">
+          Six categories. One rollup. Costs you actually understand — not a stack of receipts after you get home.
+        </p>
+        <div class="features">
+          <div class="feature">
+            <span class="badge">ITINERARY</span>
+            <h3>Days, not chaos</h3>
+            <p>Build the trip a day at a time. Hotels, flights, trains, activities, meals — all in the order you’ll actually do them.</p>
+          </div>
+          <div class="feature">
+            <span class="badge">COSTS</span>
+            <h3>Six-category rollup</h3>
+            <p>Transportation, lodging, activities, meals, misc — and a budget if you want one. Spent, remaining, and a Quick Facts dashboard that tells you what each night really cost.</p>
+          </div>
+          <div class="feature">
+            <span class="badge">MAP</span>
+            <h3>See the trip</h3>
+            <p>Every hotel, every POI, every transport leg on a real map. Plan the routing before you’re standing on a corner with a roller bag.</p>
+          </div>
+          <div class="feature">
+            <span class="badge">PRIVATE</span>
+            <h3>Your vault, your file</h3>
+            <p>The whole trip lives in a single encrypted <code>.vado</code> file. iCloud Drive, Files, AirDrop — wherever you already keep things. No account required.</p>
+          </div>
+          <div class="feature">
+            <span class="badge">NATIVE</span>
+            <h3>iOS + Mac, one bundle</h3>
+            <p>Same vault, same code, two platforms. Edit on the train, finish on the laptop. Works fully offline.</p>
+          </div>
+          <div class="feature">
+            <span class="badge">SECURE</span>
+            <h3>Two tiers, your call</h3>
+            <p>Basic locks the file with a baked-in app key. Advanced adds a passphrase + 12-word recovery phrase you control end-to-end.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── Philosophy stripe ──────────────────────────────────── -->
+    <section id="philosophy" class="stripe">
+      <div class="inner">
+        <h2>Local-first. File-based. Yours.</h2>
+        <p class="section-lede">
+          Most apps want your data so they can keep you. VadoVado wants you because the app does the job.
+          Your trip lives in a single file you can read, move, back up, or delete — without us, without a server,
+          without a sign-in. The way software used to work, with the polish of how it should.
+        </p>
+      </div>
+    </section>
+
+    <!-- ── Updates ────────────────────────────────────────────── -->
+    <section id="updates" class="updates">
+      <div class="inner">
+        <h2>Launching soon.</h2>
+        <p class="section-lede">
+          Drop your email if you want one note when VadoVado lands on the App Store and the Mac download is live.
+          No newsletter. No tracking. No follow-ups.
+        </p>
+        <form action="mailto:hello@vadovado.com" method="post" enctype="text/plain">
+          <input type="email" name="email" placeholder="you@example.com" aria-label="Your email" required />
+          <button type="submit" class="btn btn-primary">Notify me</button>
+        </form>
+        <p class="small">
+          Or just email <a href="mailto:hello@vadovado.com">hello@vadovado.com</a> directly.
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <span class="copy">© 2026 Stephen Fabiani · Cobalt Shields</span>
+    <nav>
+      <a href="/privacy/">Privacy</a>
+      <a href="mailto:hello@vadovado.com">Contact</a>
+    </nav>
+  </footer>
+
+</body>
+</html>
