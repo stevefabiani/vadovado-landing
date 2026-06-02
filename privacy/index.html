@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Privacy Policy — VadoVado</title>
+  <meta name="description" content="VadoVado privacy policy. We collect nothing — your trips live in a single encrypted file on your device. We never see it." />
+  <meta name="theme-color" content="#2E5E8F" />
+
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --adriatic: #2E5E8F;
+      --adriatic-deep: #1D4267;
+      --notte: #16212E;
+      --sole: #D99A3C;
+      --osso: #F7F4ED;
+      --osso-2: #ECE6D8;
+      --line: rgba(22, 33, 46, 0.10);
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      font-family: 'Manrope', system-ui, -apple-system, 'Helvetica Neue', sans-serif;
+      color: var(--notte);
+      background: var(--osso);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    a { color: var(--adriatic); text-decoration: none; }
+    a:hover { color: var(--adriatic-deep); text-decoration: underline; }
+
+    header {
+      padding: 28px 32px;
+      display: flex; align-items: center; justify-content: space-between;
+      max-width: 1120px; margin: 0 auto;
+    }
+    header .brand img { height: 36px; display: block; }
+    header nav a {
+      margin-left: 22px; font-weight: 500; font-size: 14px; color: var(--notte);
+    }
+
+    main {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 32px 32px 96px;
+    }
+
+    h1 {
+      font-weight: 800; font-size: clamp(36px, 5vw, 52px);
+      letter-spacing: -0.02em; margin: 8px 0 8px;
+    }
+
+    .last-updated {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px; text-transform: uppercase; letter-spacing: 0.1em;
+      color: var(--mid, #475569);
+      margin: 0 0 32px;
+    }
+
+    .tldr {
+      background: rgba(46, 94, 143, 0.08);
+      border-left: 4px solid var(--adriatic);
+      padding: 18px 22px;
+      border-radius: 4px;
+      margin: 0 0 36px;
+      font-size: 16px;
+    }
+    .tldr strong { color: var(--adriatic-deep); }
+
+    h2 {
+      font-weight: 700; font-size: 22px;
+      margin: 40px 0 12px;
+      padding-top: 12px;
+      border-top: 1px solid var(--line);
+      letter-spacing: -0.01em;
+    }
+    h2:first-of-type { border-top: none; padding-top: 0; }
+
+    h3 { font-weight: 700; font-size: 16px; margin: 22px 0 8px; }
+
+    p { margin: 0 0 14px; font-size: 15.5px; }
+
+    ul, ol { padding-left: 22px; margin: 0 0 16px; }
+    li { margin-bottom: 8px; font-size: 15.5px; }
+    li strong { font-weight: 700; }
+
+    blockquote {
+      margin: 18px 0;
+      padding: 14px 18px;
+      background: var(--osso-2);
+      border-left: 3px solid var(--sole);
+      border-radius: 4px;
+      font-size: 14.5px;
+      color: var(--notte);
+    }
+    blockquote p:last-child { margin-bottom: 0; }
+
+    code, .mono {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.92em;
+      background: var(--osso-2);
+      padding: 1px 6px;
+      border-radius: 3px;
+    }
+
+    footer {
+      padding: 32px;
+      border-top: 1px solid var(--line);
+      display: flex; flex-wrap: wrap; gap: 16px; justify-content: space-between; align-items: center;
+      max-width: 1120px; margin: 0 auto;
+      font-size: 13px; color: var(--notte); opacity: 0.75;
+    }
+    footer .copy { font-family: 'JetBrains Mono', monospace; font-size: 12px; }
+    footer nav a { margin-left: 18px; color: var(--notte); }
+
+    @media (max-width: 760px) {
+      main { padding: 24px 24px 64px; }
+      header { padding: 20px 24px; }
+      header nav a { margin-left: 14px; font-size: 13px; }
+      footer { padding: 24px; }
+      footer nav a { margin-left: 0; margin-right: 14px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a class="brand" href="/" aria-label="VadoVado home">
+      <img src="/assets/logo-horizontal.svg" alt="VadoVado" />
+    </a>
+    <nav>
+      <a href="/">Home</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Privacy Policy</h1>
+    <p class="last-updated">Last updated: June 1, 2026 · Operated by Cobalt Shields LLC, Philadelphia, PA</p>
+
+    <div class="tldr">
+      <p><strong>Plain-English version:</strong> VadoVado is a local, file-based trip planner. There are no accounts. There is no cloud. Your trips live in a single encrypted file on your device — we never see it, store it, or have any way to recover it. This policy is short because the product is built so that there's almost nothing to disclose.</p>
+    </div>
+
+    <h2>1. What we collect</h2>
+    <p><strong>Nothing.</strong></p>
+    <p>VadoVado does not collect, store, transmit, or have any access to:</p>
+    <ul>
+      <li>Your trips, days, travelers, locations, costs, notes, or any other content you enter into the app.</li>
+      <li>Your name, email address, phone number, or any other identifier.</li>
+      <li>Your IP address, device identifier, or location.</li>
+      <li>Usage analytics, telemetry, crash reports, or feature-engagement metrics.</li>
+    </ul>
+    <p>There is no VadoVado account to create. There is no VadoVado sign-in. There are no VadoVado servers that hold your data — because there are no VadoVado servers.</p>
+
+    <h2>2. Where your trip data lives</h2>
+    <p>Your entire trip — every itinerary, every reservation, every cost line — lives in a single file on your device with the <code>.vado</code> extension. The file is encrypted at rest.</p>
+    <p>You choose where the file lives on your device:</p>
+    <ul>
+      <li>On <strong>iPhone / iPad</strong>, you pick a location through the standard Files picker when you create a new vault. Common choices: iCloud Drive, On My iPhone, Google Drive (via the Drive iOS app), Dropbox, or any other Files provider you have installed.</li>
+      <li>On <strong>Mac</strong>, you pick a folder through the standard macOS save dialog.</li>
+    </ul>
+    <p>Because the <code>.vado</code> file is just a regular file, <strong>you can move, copy, back up, AirDrop, email, or delete it like any other document.</strong> If you sync it through iCloud Drive (or any other cloud-syncing folder), the sync provider sees only the encrypted bytes — they cannot read your trip contents, and neither can we.</p>
+    <p>If you delete the file (or uninstall VadoVado without first backing it up), your trip data is gone. We have no ability to recover it.</p>
+
+    <h2>3. Encryption</h2>
+    <p>Every <code>.vado</code> file is encrypted on disk using authenticated encryption (libsodium XChaCha20-Poly1305 AEAD). VadoVado offers two security tiers, chosen when you create the vault:</p>
+    <ul>
+      <li><strong>Basic</strong> — the file is locked with an encryption key baked into the VadoVado app itself. Any VadoVado install on any platform can open the file. This is the right tier if losing the encryption key on device loss is your main worry, not protecting the file against someone who steals it.</li>
+      <li><strong>Advanced</strong> — the file is locked with a passphrase you choose. The passphrase is stretched into a key using Argon2id and never leaves your device. We cannot read your passphrase, recover it, or unlock your vault on your behalf. When you set up an Advanced vault, you are shown a one-time 12-word recovery phrase that you must save somewhere safe; if you lose both the passphrase and the recovery phrase, your file becomes permanently unrecoverable.</li>
+    </ul>
+    <p>In both tiers, <strong>the encryption key never leaves your device.</strong> There is no key escrow, no recovery server, no "forgot password" link.</p>
+
+    <h2>4. Third-party services VadoVado talks to</h2>
+    <p>VadoVado contacts the following third-party services only when you use the specific feature noted. Each is governed by its own privacy policy.</p>
+    <ul>
+      <li><strong>Nominatim (OpenStreetMap Foundation).</strong> When you add a location and request geocoding (looking up its coordinates), the location name you typed is sent to Nominatim. No trip context is sent — just the place name. <a href="https://wiki.osmfoundation.org/wiki/Privacy_Policy" target="_blank" rel="noopener">Privacy policy</a></li>
+      <li><strong>OpenStreetMap tile servers.</strong> When you view the in-app map, standard map-tile requests (latitude, longitude, zoom level) go to OpenStreetMap. No trip contents are sent. <a href="https://wiki.osmfoundation.org/wiki/Privacy_Policy" target="_blank" rel="noopener">Privacy policy</a></li>
+      <li><strong>Booking.com.</strong> When you tap "Find a hotel" inside the app, VadoVado opens Booking.com in your system browser (or in an in-app Safari view on iOS) with your destination and dates pre-filled. We append our Booking.com affiliate ID to the URL so Booking can attribute the click to VadoVado. <strong>If you book a hotel through that link, Booking may pay VadoVado a referral commission, at no cost to you.</strong> Once you're on Booking.com, Booking's own privacy policy and tracking practices apply; VadoVado does not see what you book or whether you book at all. <a href="https://www.booking.com/general.html?tmpl=docs/privacy-policy" target="_blank" rel="noopener">Privacy policy</a></li>
+    </ul>
+    <p>Tapping any of those links is a deliberate action on your part — the app does not make outbound network requests on its own.</p>
+
+    <h2>5. What VadoVado does NOT do</h2>
+    <ul>
+      <li>No accounts. No sign-in. No password to forget.</li>
+      <li>No cloud syncing operated by us. If you put your <code>.vado</code> file in iCloud or another cloud folder, that's your choice and your sync provider.</li>
+      <li>No analytics. No telemetry. No crash reports.</li>
+      <li>No advertising. No ad networks. No tracking SDKs.</li>
+      <li>No third-party data brokers. We don't sell or share your data — because we don't have it.</li>
+    </ul>
+    <p>The one exception, called out for completeness:</p>
+    <blockquote>
+      <p><strong>Pre-release builds.</strong> Builds distributed for testing (Apple TestFlight; or any other beta channel we explicitly identify as a beta) may collect minimal anonymized telemetry to find and fix problems before public release. Testers are made aware of this when they accept a beta invitation. Pre-release telemetry never includes the contents of your <code>.vado</code> files. Production App Store builds do not include this telemetry.</p>
+    </blockquote>
+
+    <h2>6. Children</h2>
+    <p>VadoVado is intended for users 13 years of age or older. The app does not knowingly collect any information from children under 13. (Since the app collects nothing from anyone, this is straightforward.) If you believe a child under 13 has used the app and that we should be aware of it, contact us at <a href="mailto:info@cobaltshields.com">info@cobaltshields.com</a>.</p>
+
+    <h2>7. Your choices</h2>
+    <p>You're in control of everything VadoVado does because everything VadoVado does happens on your device:</p>
+    <ul>
+      <li><strong>Move your data</strong> — copy or move the <code>.vado</code> file like any other file.</li>
+      <li><strong>Back up your data</strong> — copy the <code>.vado</code> file anywhere you keep backups.</li>
+      <li><strong>Delete your data</strong> — delete the <code>.vado</code> file. If it's the only copy, the trip is gone.</li>
+      <li><strong>Change security tier</strong> — VadoVado lets you switch from Basic to Advanced (or vice versa) inside the app at any time. We never see the keys involved.</li>
+      <li><strong>Affiliate links</strong> — you can simply not tap "Find a hotel" if you'd rather not visit Booking.com.</li>
+    </ul>
+
+    <h2>8. Future features</h2>
+    <p>If VadoVado adds a feature that involves sending data anywhere beyond what's described above — for example, optional AI-assisted trip suggestions, optional sharing of a trip with another person, or optional cloud-backed synchronization — we will update this policy first, the feature will be off by default, and you will have the choice to opt in. We will never enable such features silently.</p>
+
+    <h2>9. Changes to this policy</h2>
+    <p>If we change this policy, we will update the <em>Last updated</em> date at the top and the policy will go live at <a href="https://vadovado.com/privacy/">https://vadovado.com/privacy/</a>. Material changes will be called out in the app's release notes.</p>
+
+    <h2>10. Contact</h2>
+    <p>Questions about VadoVado's privacy practices: <a href="mailto:info@cobaltshields.com">info@cobaltshields.com</a>.</p>
+    <p>Cobalt Shields LLC<br/>Philadelphia, PA, USA</p>
+  </main>
+
+  <footer>
+    <span class="copy">© 2026 Stephen Fabiani · Cobalt Shields</span>
+    <nav>
+      <a href="/">Home</a>
+      <a href="mailto:hello@vadovado.com">Contact</a>
+    </nav>
+  </footer>
+
+</body>
+</html>
