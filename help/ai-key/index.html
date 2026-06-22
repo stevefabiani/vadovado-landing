@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Set up AI trip planning — VadoVado</title>
+  <meta name="description" content="How to add a free AI key so VadoVado can dream up trips for you. You bring your own key — your requests go straight to the provider you choose, never through us." />
+  <meta name="theme-color" content="#2E5E8F" />
+
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --adriatic: #2E5E8F;
+      --adriatic-deep: #1D4267;
+      --notte: #16212E;
+      --sole: #D99A3C;
+      --osso: #F7F4ED;
+      --osso-2: #ECE6D8;
+      --line: rgba(22, 33, 46, 0.10);
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; }
+    body {
+      font-family: 'Manrope', system-ui, -apple-system, 'Helvetica Neue', sans-serif;
+      color: var(--notte);
+      background: var(--osso);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    a { color: var(--adriatic); text-decoration: none; }
+    a:hover { color: var(--adriatic-deep); text-decoration: underline; }
+
+    header {
+      padding: 28px 32px;
+      display: flex; align-items: center; justify-content: space-between;
+      max-width: 1120px; margin: 0 auto;
+    }
+    header .brand img { height: 36px; display: block; }
+    header nav a { margin-left: 22px; font-weight: 500; font-size: 14px; color: var(--notte); }
+
+    main { max-width: 780px; margin: 0 auto; padding: 32px 32px 96px; }
+
+    h1 { font-weight: 800; font-size: clamp(34px, 5vw, 48px); letter-spacing: -0.02em; margin: 8px 0 8px; }
+
+    .tldr {
+      background: rgba(46, 94, 143, 0.08);
+      border-left: 4px solid var(--adriatic);
+      padding: 18px 22px; border-radius: 4px; margin: 0 0 36px; font-size: 16px;
+    }
+    .tldr strong { color: var(--adriatic-deep); }
+
+    h2 {
+      font-weight: 700; font-size: 22px; margin: 40px 0 12px;
+      padding-top: 12px; border-top: 1px solid var(--line); letter-spacing: -0.01em;
+    }
+    h2:first-of-type { border-top: none; padding-top: 0; }
+
+    p { margin: 0 0 14px; font-size: 15.5px; }
+
+    ol, ul { padding-left: 22px; margin: 0 0 16px; }
+    li { margin-bottom: 10px; font-size: 15.5px; }
+    li strong { font-weight: 700; }
+
+    .steps { counter-reset: step; list-style: none; padding-left: 0; }
+    .steps > li {
+      position: relative; padding-left: 44px; margin-bottom: 18px;
+    }
+    .steps > li::before {
+      counter-increment: step; content: counter(step);
+      position: absolute; left: 0; top: 0;
+      width: 28px; height: 28px; border-radius: 50%;
+      background: var(--adriatic); color: #fff;
+      font-family: 'JetBrains Mono', monospace; font-size: 14px; font-weight: 500;
+      display: flex; align-items: center; justify-content: center;
+    }
+
+    blockquote {
+      margin: 18px 0; padding: 14px 18px; background: var(--osso-2);
+      border-left: 3px solid var(--sole); border-radius: 4px;
+      font-size: 14.5px; color: var(--notte);
+    }
+    blockquote p:last-child { margin-bottom: 0; }
+
+    code, .mono {
+      font-family: 'JetBrains Mono', monospace; font-size: 0.92em;
+      background: var(--osso-2); padding: 1px 6px; border-radius: 3px;
+    }
+
+    .cta {
+      display: inline-block; margin: 4px 0 8px;
+      background: var(--adriatic); color: #fff; font-weight: 600;
+      padding: 10px 18px; border-radius: 8px; font-size: 15px;
+    }
+    .cta:hover { background: var(--adriatic-deep); color: #fff; text-decoration: none; }
+
+    footer {
+      padding: 32px; border-top: 1px solid var(--line);
+      display: flex; flex-wrap: wrap; gap: 16px; justify-content: space-between; align-items: center;
+      max-width: 1120px; margin: 0 auto; font-size: 13px; color: var(--notte); opacity: 0.75;
+    }
+    footer .copy { font-family: 'JetBrains Mono', monospace; font-size: 12px; }
+    footer nav a { margin-left: 18px; color: var(--notte); }
+
+    @media (max-width: 760px) {
+      main { padding: 24px 24px 64px; }
+      header { padding: 20px 24px; }
+      header nav a { margin-left: 14px; font-size: 13px; }
+      footer { padding: 24px; }
+      footer nav a { margin-left: 0; margin-right: 14px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <a class="brand" href="/" aria-label="VadoVado home">
+      <img src="/assets/logo-horizontal.svg" alt="VadoVado" />
+    </a>
+    <nav>
+      <a href="/">Home</a>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Set up AI trip planning</h1>
+
+    <div class="tldr">
+      <p><strong>The short version:</strong> VadoVado's “Dream up a trip” turns your idea into a real, editable route using an AI service. You add your own free key once, in Settings. Your requests go <strong>straight from the app to the provider you choose</strong> — they never pass through us, and we never see them. The free option below (Google Gemini) takes about two minutes to set up.</p>
+    </div>
+
+    <h2>Why your own key?</h2>
+    <p>VadoVado has no servers and no accounts — it never sees your trips. To keep that promise while still offering AI help, you connect the app to an AI provider using your own key. That means:</p>
+    <ul>
+      <li>Your requests go directly to the provider, under your own account — not through VadoVado.</li>
+      <li>You're not sharing one key (or one rate limit) with every other user, so it stays fast and reliable.</li>
+      <li>You stay in control: remove the key anytime and the feature simply turns off.</li>
+    </ul>
+    <p>Google Gemini has a free tier that's more than enough for planning trips. If you'd rather use Anthropic Claude or OpenAI, those work too (they're paid) — the steps are the same, just on their key pages.</p>
+
+    <h2>Get a free Google Gemini key</h2>
+    <ol class="steps">
+      <li>Open <a href="https://aistudio.google.com/apikey" target="_blank" rel="noopener noreferrer">aistudio.google.com/apikey</a> and sign in with a Google account.
+        <br/><a class="cta" href="https://aistudio.google.com/apikey" target="_blank" rel="noopener noreferrer">Open Google AI Studio →</a></li>
+      <li>Click <strong>“Create API key.”</strong> If it asks, let it create or pick a Google Cloud project — you don't need to set up billing for the free tier.</li>
+      <li>Copy the key. It starts with <code>AIza…</code></li>
+      <li>In VadoVado, open <strong>Settings → AI Service</strong>, choose <strong>Google Gemini</strong>, paste the key into the key field, and tap <strong>Save</strong>.</li>
+      <li>Tap <strong>✨ Dream up a trip</strong> and describe where you'd like to go. That's it.</li>
+    </ol>
+
+    <blockquote>
+      <p><strong>Keep your key private.</strong> Treat the key like a password — don't post it or share it. If it's ever exposed, delete it in Google AI Studio and create a new one; then paste the new one into Settings.</p>
+    </blockquote>
+
+    <h2>Prefer Anthropic Claude or OpenAI?</h2>
+    <p>Same idea — create a key on the provider's site and paste it into the matching field in <strong>Settings → AI Service</strong>. These are paid services (you set up billing with the provider):</p>
+    <ul>
+      <li><strong>Anthropic Claude</strong> — create a key at <a href="https://console.anthropic.com/settings/keys" target="_blank" rel="noopener noreferrer">console.anthropic.com</a> (starts with <code>sk-ant-…</code>).</li>
+      <li><strong>OpenAI</strong> — create a key at <a href="https://platform.openai.com/api-keys" target="_blank" rel="noopener noreferrer">platform.openai.com</a> (starts with <code>sk-…</code>).</li>
+    </ul>
+
+    <h2>What happens to my trip idea?</h2>
+    <p>When you use “Dream up a trip,” the text of your request (for example, “a relaxed week in the South of France, food and villages”) is sent to the AI provider you selected so it can suggest a route. That request is handled under <strong>that provider's</strong> privacy policy — VadoVado never receives, sees, or stores it. Everything else about your trip stays in your encrypted file on your device. As a rule of thumb, don't put anything in a trip request you wouldn't be comfortable sharing with that provider. See our <a href="/privacy/">privacy policy</a> for the full picture.</p>
+
+    <h2>Troubleshooting</h2>
+    <ul>
+      <li><strong>“The API key was rejected.”</strong> Double-check you copied the whole key with no extra spaces, and that you pasted it into the field for the provider you selected (a Gemini key won't work in the Anthropic field).</li>
+      <li><strong>“Rate-limited, try again in a moment.”</strong> Free tiers limit how many requests you can make in a short window. Wait a few seconds and try again.</li>
+      <li><strong>Nothing happens / it can't reach the service.</strong> Check your internet connection and try once more.</li>
+    </ul>
+  </main>
+
+  <footer>
+    <span class="copy">© 2026 Stephen Fabiani</span>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/privacy/">Privacy</a>
+      <a href="mailto:hello@vadovado.com">Contact</a>
+    </nav>
+  </footer>
+
+</body>
+</html>
