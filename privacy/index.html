@@ -143,7 +143,7 @@
 
   <main>
     <h1>Privacy Policy</h1>
-    <p class="last-updated">Last updated: June 21, 2026 · Operated by Stephen Fabiani, Philadelphia, PA</p>
+    <p class="last-updated">Last updated: June 22, 2026 · Operated by Stephen Fabiani, Philadelphia, PA</p>
 
     <div class="tldr">
       <p><strong>Plain-English version:</strong> VadoVado is a local, file-based trip planner. There are no accounts. There is no cloud. Your trips live in a single encrypted file on your device — we never see it, store it, or have any way to recover it. This policy is short because the product is built so that there's almost nothing to disclose.</p>
@@ -181,18 +181,21 @@
     <h2>4. Third-party services VadoVado talks to</h2>
     <p>VadoVado contacts the following third-party services only when you use the specific feature noted. Each is governed by its own privacy policy.</p>
     <ul>
-      <li><strong>Nominatim (OpenStreetMap Foundation).</strong> When you add a location and request geocoding (looking up its coordinates), the location name you typed is sent to Nominatim. No trip context is sent — just the place name. <a href="https://wiki.osmfoundation.org/wiki/Privacy_Policy" target="_blank" rel="noopener">Privacy policy</a></li>
+      <li><strong>Mapbox.</strong> When you search for a place, hotel, or point of interest (the location and things-to-do searches), the text you type is sent to Mapbox's search/geocoding service to find matching places and their coordinates. Only your search text is sent — no other trip context. Mapbox is the primary place-search provider. <a href="https://www.mapbox.com/legal/privacy" target="_blank" rel="noopener">Privacy policy</a></li>
+      <li><strong>Nominatim (OpenStreetMap Foundation).</strong> A fallback geocoder used when Mapbox is unavailable. As with Mapbox, only the place name you typed is sent — no other trip context. <a href="https://wiki.osmfoundation.org/wiki/Privacy_Policy" target="_blank" rel="noopener">Privacy policy</a></li>
       <li><strong>OpenStreetMap tile servers.</strong> When you view the in-app map, standard map-tile requests (latitude, longitude, zoom level) go to OpenStreetMap. No trip contents are sent. <a href="https://wiki.osmfoundation.org/wiki/Privacy_Policy" target="_blank" rel="noopener">Privacy policy</a></li>
       <li><strong>Booking.com.</strong> When you tap "Find a hotel" inside the app, VadoVado opens Booking.com in your system browser (or in an in-app Safari view on iOS) with your destination and dates pre-filled. We append our Booking.com affiliate ID to the URL so Booking can attribute the click to VadoVado. <strong>If you book a hotel through that link, Booking may pay VadoVado a referral commission, at no cost to you.</strong> Once you're on Booking.com, Booking's own privacy policy and tracking practices apply; VadoVado does not see what you book or whether you book at all. <a href="https://www.booking.com/general.html?tmpl=docs/privacy-policy" target="_blank" rel="noopener">Privacy policy</a></li>
+      <li><strong>Viator (a Tripadvisor company).</strong> When you tap "Find things to do" or an activity link, VadoVado opens Viator in your system browser (or an in-app Safari view on iOS) with your destination pre-filled. We append our Viator affiliate ID so Viator can attribute the click to VadoVado. <strong>If you book an activity through that link, Viator may pay VadoVado a referral commission, at no cost to you.</strong> Once you're on Viator, its own privacy policy and tracking practices apply; VadoVado does not see what you view or book. <a href="https://www.viator.com/privacy/" target="_blank" rel="noopener">Privacy policy</a></li>
       <li><strong>Your chosen AI provider (Google Gemini, Anthropic, or OpenAI).</strong> When you use "Dream up a trip" or ask for ideas of things to do, the text of <em>that request</em> — for example, the destination or trip idea you typed — is sent to the AI provider you selected in Settings, using the API key you provided, so it can generate suggestions. The request goes <strong>directly from the app to that provider</strong>; VadoVado has no server in the middle and never receives, sees, or stores it. The provider handles it under <strong>its own</strong> privacy policy. We don't send the contents of your <code>.vado</code> file — only the request you make. This feature is off until you add a key; as a rule of thumb, don't include anything in a request you wouldn't share with that provider. <a href="https://ai.google.dev/gemini-api/terms" target="_blank" rel="noopener">Google</a> · <a href="https://www.anthropic.com/legal/privacy" target="_blank" rel="noopener">Anthropic</a> · <a href="https://openai.com/policies/privacy-policy/" target="_blank" rel="noopener">OpenAI</a></li>
+      <li><strong>Sentry (crash &amp; error reporting) — opt-in, off by default.</strong> Only if you turn on crash reporting in Settings: when the app crashes or hits an error, it sends a diagnostic report (a stack trace plus a short trail of recent in-app activity) to Sentry so we can find and fix the problem. Before anything is sent we make a <strong>best-effort</strong> attempt to strip out your trip contents, file paths, and known secrets — best-effort, not a guarantee of zero. Reports are tied to a random anonymous ID you can regenerate at any time, never to your name or account (there is no account). You can turn it back off whenever you like. <a href="https://sentry.io/privacy/" target="_blank" rel="noopener">Privacy policy</a></li>
     </ul>
-    <p>Tapping any of those links is a deliberate action on your part — the app does not make outbound network requests on its own.</p>
+    <p>With the single exception of opt-in crash reporting (above), the app makes no outbound network requests on its own — each of the other calls happens only from a deliberate action you take.</p>
 
     <h2>5. What VadoVado does NOT do</h2>
     <ul>
       <li>No accounts. No sign-in. No password to forget.</li>
       <li>No cloud syncing operated by us. If you put your <code>.vado</code> file in iCloud or another cloud folder, that's your choice and your sync provider.</li>
-      <li>No analytics. No telemetry. No crash reports.</li>
+      <li>No analytics. No telemetry. No tracking of how you use the app. Crash &amp; error reporting is <strong>opt-in and off by default</strong> — nothing is sent unless you deliberately turn it on (see section 4).</li>
       <li>No advertising. No ad networks. No tracking SDKs.</li>
       <li>No third-party data brokers. We don't sell or share your data — because we don't have it.</li>
     </ul>
